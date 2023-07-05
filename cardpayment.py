@@ -13,6 +13,7 @@ handler.setFormatter(formatter)
 logger.addHandler(handler)
 
 # Fake data generator.
+Faker.seed(random.randint(0, 100))
 fake = Faker()
 
 
@@ -25,6 +26,7 @@ def log_checkout_transaction():
         "address": fake.address(),
         "first_name": fake.first_name(),
         "last_name": fake.last_name(),
+        "ssn": fake.ssn(),
         "transaction_id": transaction_id,
     }
     logging.info(
