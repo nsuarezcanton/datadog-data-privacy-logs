@@ -52,7 +52,7 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - datadog-agent
-    # (3) TODO: Uncomment in the labels section to update the serive tag applied to this container's logs.
+    # (3) TODO: Uncomment in the labels section to update the service tag applied to this container's logs.
     # labels:
     #   com.datadoghq.ad.logs: >-
     #     [
